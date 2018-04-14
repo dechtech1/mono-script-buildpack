@@ -75,8 +75,8 @@ fi
 
 if [ -f packages.config -o -f */packages.config ]; then
    echo "-----> packages.config found, installing dependencies with nuget"
-   packfile = find -name 'packages.config'
-   xargs mono $NUGET install $packfile -o packages
+   PCKFILE = find -name 'packages.config'
+   xargs mono $NUGET install $PCKFILE -o packages
 fi
 
 if [ -f app.fsx ]; then
