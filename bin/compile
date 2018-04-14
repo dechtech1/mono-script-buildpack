@@ -75,7 +75,7 @@ fi
 
 if [ -f packages.config -o -f */packages.config ]; then
    echo "-----> packages.config found, installing dependencies with nuget"
-   $PCKFILE = find -name 'packages.config'
+   $PCKFILE=`find -name "packages.config"`
    xargs mono $NUGET install $PCKFILE -o packages
 fi
 
